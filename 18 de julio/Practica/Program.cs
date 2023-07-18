@@ -23,7 +23,7 @@ namespace Practica
             lista.Add(coche3);
             lista.Add(coche4);
             
-
+            
             foreach (var coche in lista)
             {
                 coche.calcularValor();
