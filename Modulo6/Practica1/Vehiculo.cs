@@ -13,7 +13,7 @@ namespace Practica1
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public string Color { get; set; }
-   
+    
 
         public Vehiculo(DateTime añocompra, string marca, string modelo,string color) {
             AñoCompra = añocompra;
