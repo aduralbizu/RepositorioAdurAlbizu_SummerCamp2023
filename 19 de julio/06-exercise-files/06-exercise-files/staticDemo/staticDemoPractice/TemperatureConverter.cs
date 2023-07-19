@@ -10,7 +10,7 @@ namespace staticDemoPractice
    {
       public static double CelsiusToFahrenheit(string tempCelsius)
       {
-         double celsius = Double.Parse(tempCelsius);
+         double celsius = Double.Parse(tempCelsius); //Tipo y método que convierte
          double fahrenheit = (celsius * 9 / 5) + 32;
          return fahrenheit;
       }
