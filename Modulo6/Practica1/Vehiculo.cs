@@ -34,10 +34,10 @@ namespace Practica1
         }
         public void imprimirCoche()
         {
-            Console.WriteLine("Año de compra: " + AñoCompra);
-            Console.WriteLine("Marca: " + Marca);
-            Console.WriteLine("Modelo " + Modelo);
-            Console.WriteLine("Color: " + Color);
+            if (AñoCompra!= new DateTime(0001,01,01)) Console.WriteLine("Año de compra: " + AñoCompra);
+            if (Marca!=null) Console.WriteLine("Marca: " + Marca);
+            if (Modelo!=null) Console.WriteLine("Modelo: " + Modelo);
+            if (Color!=null) Console.WriteLine("Color: " + Color);
             Console.WriteLine();
         }
 
