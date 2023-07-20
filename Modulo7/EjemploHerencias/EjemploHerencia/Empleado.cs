@@ -19,5 +19,5 @@ namespace EjemploHerencia
                 $" Dias Vacaciones: {diasVacaciones}" +
                 $" Tipo: Empleado ]";
         }
-    }
+    } 
 }
