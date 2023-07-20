@@ -15,9 +15,10 @@ namespace EjemploHerencia
 
         public override string ToString()
         {
-            return $"[ Empleado.Nombre: {Nombre}" + 
+            return $"[ Empleado.Nombre: {Nombre}" +
                 $" Dias Vacaciones: {diasVacaciones}" +
                 $" Tipo: Empleado ]";
+
         }
     } 
 }
