@@ -47,18 +47,19 @@ namespace EjemploHerencia
             //En formato sql: SELECT * FROM empleados WHERE empleados.Nombre.StartsWith("J");
 
             IEnumerable<Empleado> listaempleadosJ = from empleado in lista
-                                                    where empleado.Nombre.StartsWith("J")
+                                                    where empleado.Nombre.StartsWith("J") 
+                                                    || empleado.Nombre.StartsWith("j") 
                                                     orderby empleado.Nombre
                                                     select empleado;
 
-
-            foreach (var empleado in lista)
+            Console.WriteLine();
+            foreach (var empleado in listaempleadosJ)
             {
 
                 empleado.CalculoVacaciones();
                 Console.WriteLine(empleado.ToString());
             }
-
+            Console.WriteLine();
 
             try
             {
@@ -75,7 +76,7 @@ namespace EjemploHerencia
             catch (ErrorBaseDatosExcepcion ex)
             {
 
-                Console.WriteLine(ex.ToString() + ex.FechaHoraExcepcion.ToString());
+                Console.WriteLine(ex.ToString() + ex.FechaHoraExcepcion.ToString()); //Con tu string saco un texto predeterminado. También imprimo el tiempo
 
             }
 
