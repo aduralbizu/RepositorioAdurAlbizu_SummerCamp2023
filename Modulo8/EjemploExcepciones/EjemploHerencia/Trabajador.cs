@@ -21,5 +21,11 @@ namespace EjemploHerencia
                 $" Dias Vacaciones: {diasVacaciones}" +
                 $" Tipo: Trabajador ]";
         }
+
+        public override void CalculoVacaciones() //Virtual porque puede ocurrir que en padre no defina nada
+        {
+            base.CalculoVacaciones(); //Antes llamamos al padre para sumar 10. 
+            diasVacaciones += 15;
+        }
     }
 }

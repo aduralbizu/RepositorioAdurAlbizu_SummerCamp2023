@@ -8,14 +8,13 @@ namespace EjemploHerencia
 {
     public class Administrador : Empleado
     {
-        public Administrador(string nombre, bool plaza, int numplaza) : base(nombre)
+        public Administrador(string nombre, bool tieneParking) : base(nombre)
         {
-            Plaza = plaza;
-            Numplaza = numplaza;
+            TieneParking = tieneParking;
+            
         }
 
-        public bool Plaza { get; }
-        public int Numplaza { get; }
+        public bool TieneParking { get; }
 
         public override string ToString()
         {
@@ -23,5 +22,16 @@ namespace EjemploHerencia
                 $" Dias Vacaciones: {diasVacaciones}" +
                 $" Tipo: Administrativo ]";
         }
+
+        public String plazaParking()
+        {
+            return TieneParking ? "Plaza A-1" : "No tiene Plaza";
+        }
+        public virtual void CalculoVacaciones() //Virtual porque puede ocurrir que en padre no defina nada
+        {
+            diasVacaciones += 9; //no lllamamos a base!!!!
+        }
+
+
     }
 }

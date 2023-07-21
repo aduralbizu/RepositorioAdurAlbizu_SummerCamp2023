@@ -8,9 +8,11 @@ namespace EjemploHerencia
 {
     public class Externo:Empleado
     {
-        public Externo(string nombre) : base(nombre)
+
+        public Empresa Empresa { get; set; }
+        public Externo(string nombre, Empresa empresa) : base(nombre)
         {
-        
+            Empresa = empresa;
         }
 
         public override string ToString()

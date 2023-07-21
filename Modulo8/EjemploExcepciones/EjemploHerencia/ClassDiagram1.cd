@@ -17,8 +17,22 @@
   <Class Name="EjemploHerencia.Administrador">
     <Position X="7" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAhAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Administrador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EjemploHerencia.Externo">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Externo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EjemploHerencia.Empresa">
+    <Position X="11.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Empresa.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
