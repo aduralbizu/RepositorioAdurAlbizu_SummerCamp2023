@@ -3,21 +3,21 @@
   <Class Name="EjemploHerencia.Empleado">
     <Position X="4.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAQAAgAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
-      <FileName>Empleado.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAQAAgAAAQAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Parciales\Empleado.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EjemploHerencia.Trabajador">
-    <Position X="9.5" Y="3.75" Width="1.5" />
+    <Position X="9.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Trabajador.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EjemploHerencia.Administrador">
     <Position X="7" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAhAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Administrador.cs</FileName>
     </TypeIdentifier>
   </Class>

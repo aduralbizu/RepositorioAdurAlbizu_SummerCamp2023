@@ -21,7 +21,7 @@ namespace EjemploHerencia
 
             */
 
-            //Ahora el ejercicio:
+            /* Esto era el ejercicio de ayer: :
 
             Empleado juan = new Empleado("Juan");
             Administrador jose = new Administrador("Jose");
@@ -31,6 +31,8 @@ namespace EjemploHerencia
             Console.WriteLine(jose.ToString());
             Console.WriteLine(laura.ToString());
 
+
+            */
 
 
 

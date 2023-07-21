@@ -2,24 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using EjemploHerencia;
+using System.Threading.Tasks;
 
 namespace EjemploHerencia
 {
-    public class Trabajador : Empleado
+    public class Externo:Empleado
     {
-        public Trabajador(string nombre, string turno) : base(nombre)
+        public Externo(string nombre) : base(nombre)
         {
-            Turno = turno;
+        
         }
-
-        public string Turno { get; }
 
         public override string ToString()
         {
             return $"[ Empleado.Nombre: {Nombre}" +
                 $" Dias Vacaciones: {diasVacaciones}" +
-                $" Tipo: Trabajador ]";
+                $" Tipo: Externo ]";
         }
+
+
+
     }
 }
