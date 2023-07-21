@@ -15,6 +15,7 @@ namespace EjemploHerencia
         }
 
         public bool TieneParking { get; }
+        
 
         public override string ToString()
         {
@@ -25,7 +26,11 @@ namespace EjemploHerencia
 
         public String plazaParking()
         {
+            //TODO: Conectar a BBDD
+
+            throw new ErrorBaseDatosExcepcion("Error al conectar BBDD", DateTime.Now);//Se para todo
             return TieneParking ? "Plaza A-1" : "No tiene Plaza";
+
         }
         public virtual void CalculoVacaciones() //Virtual porque puede ocurrir que en padre no defina nada
         {
