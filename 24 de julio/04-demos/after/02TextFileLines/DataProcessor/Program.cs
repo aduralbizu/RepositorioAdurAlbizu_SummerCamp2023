@@ -33,18 +33,18 @@ namespace DataProcessor
 
                 using (var inputFileWatcher = new FileSystemWatcher(directoryToWatch))
                 {
-                    inputFileWatcher.IncludeSubdirectories = false;
+                    inputFileWatcher.IncludeSubdirectories = false; //Esto es un watcher, ponemos un filtro sobre qué queremos ver
                     inputFileWatcher.InternalBufferSize = 32768; // 32 KB
                     inputFileWatcher.Filter = "*.*";
                     inputFileWatcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite;
 
-                    inputFileWatcher.Created += FileCreated;
+                   /* inputFileWatcher.Created += FileCreated;
                     inputFileWatcher.Changed += FileChanged;
                     inputFileWatcher.Deleted += FileDeleted;
                     inputFileWatcher.Renamed += FileRenamed;
                     inputFileWatcher.Error += WatcherError;
 
-                    inputFileWatcher.EnableRaisingEvents = true;
+                    inputFileWatcher.EnableRaisingEvents = true;*/
 
                     WriteLine("Press enter to quit.");
                     ReadLine();

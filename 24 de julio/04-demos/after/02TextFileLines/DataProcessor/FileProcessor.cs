@@ -80,7 +80,7 @@ namespace DataProcessor
                     break;
             }
 
-            WriteLine($"Completed processing of {inProgressFilePath}");
+            WriteLine($"Completed processing of {inProgressFilePath}"); //explicacion clase
 
             WriteLine($"Deleting {inProgressFilePath}");
             File.Delete(inProgressFilePath);

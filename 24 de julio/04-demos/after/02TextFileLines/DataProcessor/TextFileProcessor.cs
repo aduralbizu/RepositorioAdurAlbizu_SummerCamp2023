@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace DataProcessor
 {
@@ -9,6 +10,8 @@ namespace DataProcessor
 
         public TextFileProcessor(string inputFilePath, string outputFilePath)
         {
+
+
             InputFilePath = inputFilePath;
             OutputFilePath = outputFilePath;
         }
@@ -21,9 +24,18 @@ namespace DataProcessor
             //File.WriteAllText(OutputFilePath, processedText);
 
             // Using read all lines
-            string[] lines = File.ReadAllLines(InputFilePath);
-            lines[1] = lines[1].ToUpperInvariant(); // Assumes there is a line 2 in the file
-            File.WriteAllLines(OutputFilePath, lines);
+
+            try
+            {
+                string[] lines = File.ReadAllLines(InputFilePath);
+                lines[1] = lines[1].ToUpperInvariant(); // Assumes there is a line 2 in the file
+                File.WriteAllLines(OutputFilePath, lines);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
         }
     }
 }
