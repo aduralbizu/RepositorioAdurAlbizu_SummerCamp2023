@@ -55,7 +55,7 @@ namespace EjemploHerencia
                         break;
                     case "Administrador":
                         //TODO: Mostrar plaza de parking y controlar errores
-                        try
+                        try //También se podría colocar fuera
                         {
                             // tiene plaza de parking? si tiene mostrar
                             var administrador = (Administrador)empleado;
