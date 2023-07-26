@@ -60,7 +60,7 @@ namespace Acme.Biz.Tests
         [TestMethod()]
         public void PlaceOrderTest() //Fijarse en eso
         {
-            // Arrange
+            // Arrange 
             var vendor = new Vendor();
             var product = new Product(1, "Saw", "");
             var expected = new OperationResult <bool> (true,
