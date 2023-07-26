@@ -108,7 +108,7 @@ namespace Acme.Biz.Tests
             // Expected exception
         }
 
-        [TestMethod()]
+        [TestMethod()] 
         public void PlaceOrder_NoDeliveryDate()
         {
             // Arrange
