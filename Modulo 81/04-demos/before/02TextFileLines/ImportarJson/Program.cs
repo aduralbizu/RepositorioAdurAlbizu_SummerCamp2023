@@ -8,6 +8,9 @@ namespace ImportarJson
     {
         static void Main(string[] args)
         {
+
+            // Ejemplo de la documentacion
+
             /*string json = @"{
              'Name': 'Bad Boys',
              'ReleaseDate': '1995-4-7T00:00:00',
