@@ -48,12 +48,17 @@ namespace EjemploDelegados
 
             inventarioMedios.ResultadoProbarMedios(probarCintasVhsDelegado);
 
-            //++Continuaciçon del ejercicio
+            //++Continuacion del ejercicio (mi parte):
 
             string CodigoBarras = "2132902ddwd123e";
 
-            InfoMedioDelegado InfoDiscoDelegado = new InfoMedioDelegado(tocaDiscos.ObtenerCancionesDisco(CodigoBarras)); //Recibe como parametro puntero a un metodo
-            InfoMedioDelegado InfoCintaVhsDelegado = new InfoMedioDelegado(videoVhs. ObtenerinfoPeli); //
+            InfoMedioDelegado InfoDiscoDelegado = new InfoMedioDelegado(tocaDiscos.ObtenerCancionesDisco); //Recibe como parametro puntero a un metodo
+            InfoMedioDelegado InfoCintaVhsDelegado = new InfoMedioDelegado(videoVhs.ObtenerinfoPeli); //+ Solo le estoy diciendo donde esta el metodo
+
+            Console.WriteLine();
+            inventarioMedios.ResultadoProbarMedios2(InfoDiscoDelegado, CodigoBarras );
+            inventarioMedios.ResultadoProbarMedios2(InfoCintaVhsDelegado, CodigoBarras );
+
 
         }
     }

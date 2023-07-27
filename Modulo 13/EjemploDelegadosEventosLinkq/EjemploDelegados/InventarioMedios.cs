@@ -61,8 +61,21 @@ namespace EjemploDelegados
             }
 
         }
-            
-        
+
+        public void ResultadoProbarMedios2(InfoMedioDelegado probarMediosDelegado, string codigobarras)
+        { //No llega clase entera, sino solo el metodo
+
+            //1-Llama las funciones de cada, es decir, me da info de cada elemento
+            //
+
+            var resultadoPrueba = probarMediosDelegado(codigobarras);
+           
+            Console.WriteLine(resultadoPrueba);
+
+
+        }
+
+
 
 
     }
