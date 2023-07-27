@@ -30,7 +30,7 @@ namespace ImportarJson
 
 
            //Ejercicio de hoy:
-           string json = File.ReadAllText(@"C:\prueba2\Modulo 81\04-demos\before\02TextFileLines\ImportarJson\Monedas.json");
+           string json = File.ReadAllText(@"C:\prueba2\Modulo 81\04-demos_AQUI_ESTA_JSON\before_AQUI_ESTA_JSON\02TextFileLines_AQUI_ESTA_JSON\ImportarJson\Monedas.json");
 
            List <Moneda> monedas = JsonConvert.DeserializeObject< List <Moneda>>(json);
 
