@@ -61,7 +61,7 @@ namespace EjemploDelegados
             }
 
         }
-
+         
         public void ResultadoProbarMedios2(InfoMedioDelegado probarMediosDelegado, string codigobarras)
         { //No llega clase entera, sino solo el metodo
 
