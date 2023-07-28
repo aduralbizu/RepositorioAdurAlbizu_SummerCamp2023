@@ -9,7 +9,7 @@
 
         //Evento:
 
-        public event CambioSegundoDelegado CambioSegundoEvento;
+        public event CambioSegundoDelegado CambioSegundoEvento; //este es el evento
 
         public Reloj()
         {
