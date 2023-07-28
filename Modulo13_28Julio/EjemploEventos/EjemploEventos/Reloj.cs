@@ -6,7 +6,7 @@
 
         public delegate void CambioSegundoDelegado(object reloj, InformacionTiempoEventArgs informacionTiempo);
         //el metodo con su misma firma podra ser guardado en el delegado
-
+        //A delegate is a way of telling C# which method to call when an event is triggered. 
         //Evento:
 
         public event CambioSegundoDelegado CambioSegundoEvento; //este es el evento
