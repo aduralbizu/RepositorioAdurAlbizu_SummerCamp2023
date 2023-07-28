@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace ImportarJson
 {
-        public class Moneda    {        public string nombre { get; set; }        public string codigo { get; set; }        public float valorEnDolares { get; set; }    }
+    
+
+
+    public class Moneda
+    {
+        public string nombre { get; set; }
+        public string codigo { get; set; }
+        public float valorEnDolares { get; set; }
+    }
 
 }
