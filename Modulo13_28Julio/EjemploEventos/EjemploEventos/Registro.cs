@@ -13,7 +13,7 @@
         {
             reloj.CambioSegundoEvento += Reloj_CambioSegundoEvento;
         }
-
+         
         private void Reloj_CambioSegundoEvento(object reloj, InformacionTiempoEventArgs e)
         {
 
