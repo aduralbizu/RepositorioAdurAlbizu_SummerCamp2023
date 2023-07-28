@@ -1,4 +1,6 @@
-﻿namespace EjemploEventos
+﻿using System.ComponentModel;
+
+namespace EjemploEventos
 {
     internal class Registro
     {
@@ -20,7 +22,8 @@
             
             Date2 = DateTime.Now;
             
-            TimeSpan interval = Date2 - Date1;
+           
+            TimeSpan interval = Date2 - Date1; //Sacando de e + exacto
             
             if (interval.Seconds >= 10)
             {
