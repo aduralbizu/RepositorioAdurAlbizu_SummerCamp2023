@@ -6,7 +6,9 @@
         {
             var ejemplo = new Ejemplo();
 
-            ejemplo.EjemploDelegados1();
+            ejemplo.EjemploFunc();
+
+            ejemplo.EjemploAction();
         }
     }
 }
