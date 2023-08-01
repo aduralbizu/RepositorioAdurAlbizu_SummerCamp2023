@@ -51,7 +51,7 @@ namespace EjemploLinq
 
             //Sintaxis de métodos:
             //1- Preparación:
-            // Func<string, bool> predicado = nivel => nivel.Length > 6;
+            // Func<string, bool> predicado = nivel => nivel.Length > 6; 
             // var consultaLinqMetodos = niveles.Where(predicado);     Esto era solo un ejemplo
 
             var consultaLinqMetodos = niveles.Where(nivel => nivel.Length > 6)
