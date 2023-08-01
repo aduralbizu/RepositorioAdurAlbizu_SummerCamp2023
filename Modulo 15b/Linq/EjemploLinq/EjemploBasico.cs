@@ -60,6 +60,9 @@ namespace EjemploLinq
             //2-Resultados:
             List<string> listaResultadosLinqMetodos = consultaLinqMetodos.ToList();
 
+            
+
+
         }
     }
 }

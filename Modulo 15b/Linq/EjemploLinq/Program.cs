@@ -4,8 +4,12 @@
     {
         static void Main(string[] args)
         {
-            var ejemploBasico = new EjemploBasico();
-            ejemploBasico.Ejecutar();
+            var EjemploOperador1 = new EjemploBasico();
+            EjemploOperador1.Ejecutar();
+
+            var ejemplooperador1 = new EjemploOperador1();
+            ejemplooperador1.Ejecutar();
+
         }
     }
 }
