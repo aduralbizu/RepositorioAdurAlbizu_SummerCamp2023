@@ -39,7 +39,7 @@ namespace Movies.Client.Services
 
         private async Task EjemploGet() //Hemos editado para el ejercicio
         {
-            var response = await _HttpClient.GetAsync("api/activity?key=5881028"); //une _HttpClient.BaseAddress + "api/movies"
+            var response = await _HttpClient.GetAsync("api/activity?"); //une _HttpClient.BaseAddress + "api/movies"
 
             response.EnsureSuccessStatusCode(); //Obligatoria experar a que todo vaya bien sin expecion
 
