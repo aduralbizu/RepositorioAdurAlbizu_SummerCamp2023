@@ -10,10 +10,11 @@ namespace ProyectoFinalConsola
             Menu menu = new Menu();
             menu.Ejecutar();
 
-            ProbadorApi.Run().Wait();
+            ClienteAPI.GetApiResponse("v1/latest?apikey=fca_live_cV1mDh79gHYunHYxMEIeuL6CIINDyjmpDPXUvCBf").Wait();
 
-            
- 
+
+
+
         }
     }
 }

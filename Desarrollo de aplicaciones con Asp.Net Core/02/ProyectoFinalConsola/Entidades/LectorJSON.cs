@@ -4,7 +4,7 @@ using ProyectoFinalConsola.Entidades;
 
 namespace Entidades
 {
-    internal class LectorJSON
+    public class LectorJSON
     {
         public LectorJSON()
         {
@@ -21,8 +21,8 @@ namespace Entidades
 
         public List<Moneda> LeerMonedas()
         {
-            string directorioActual = new DirectoryInfo(path: Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName;
-            string monedasJson = File.ReadAllText($"{directorioActual}\\JSONS\\Monedas.json");
+            string directorioActual = new DirectoryInfo(path: Directory.GetCurrentDirectory()).Parent.FullName;
+            string monedasJson = File.ReadAllText($"{directorioActual}\\ProyectoFinalConsola\\JSONS\\Monedas.json");
             List<Moneda> monedas = JsonConvert.DeserializeObject<List<Moneda>>(monedasJson);
             return monedas;
         }
