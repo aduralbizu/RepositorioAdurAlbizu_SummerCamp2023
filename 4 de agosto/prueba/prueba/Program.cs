@@ -19,7 +19,7 @@ builder.Services.AddScoped<IServicioMonedas,ServicioMonedas>(); //siempre que po
 //builder.Services.AddScoped<IServicioMonedas,ServicioCriptoMonedas>(); Para qye trabaje con criptomonedas. Ejercicio resuleto
 
 
-
+ 
 //Cada vez que yo pida iser.., se instanciará ServicioMonedas
 var app = builder.Build();
 
