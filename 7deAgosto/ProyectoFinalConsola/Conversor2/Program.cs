@@ -1,4 +1,6 @@
 using Conversor2.Data;
+using Conversor2.Models;
+using Entidades;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,11 +16,15 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IRepositorioMonedas,RepositorioMonedasMemoria>(); //Esto hemos colocado en este ejemplo
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
-{<
+{
     app.UseMigrationsEndPoint();
 }
 else
@@ -37,8 +43,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    name: "default", //De momento solo hay una ruta
+    pattern: "{controller=Home}/{action=Index}/{id?}"); //POR DEFECTO HOME, INDEX. la interrogacion significa opcional. Index no se ve
 app.MapRazorPages();
 
 app.Run();
