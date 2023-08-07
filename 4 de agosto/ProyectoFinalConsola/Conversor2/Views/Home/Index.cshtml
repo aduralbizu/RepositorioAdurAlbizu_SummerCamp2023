@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    //var saludo = "hohlas";
+    //var fecha = DateTime.Now;
+} 
+<h1>@ViewBag.saludo </h1>
+<h2> Hoy es: @ViewBag.fecha</h2>
+
+<h3>@ViewBag.Euro</h3>
+<h3>@ViewBag.Euro.Codigo</h3>
+<h4>La primera moneda de la lista es: @ViewBag.listaMonedas[0].Codigo</h4>
+<h4>La segunda moneda de la lista es: @ViewBag.listaMonedas[1].Codigo</h4>
+<h4>La tercera moneda de la lista es: @ViewBag.listaMonedas[2].Codigo</h4>
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
