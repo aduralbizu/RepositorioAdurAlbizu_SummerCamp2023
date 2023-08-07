@@ -1,5 +1,4 @@
-using EjemploMvcConversor.Servicios;
-using prueba.Controllers.servicios;
+using prueba.servicios;
 
 //ejercicio1: En lugar de monedas normales trabajar con criptomonedas sin tocar homecontrol
 //Ejercicio2: Crear un servicio que manda correos cuando te metes a privacidad. Hace falta crear 
@@ -16,8 +15,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews(); //MVC=>Modelo vista controlador. Aunque se comente, programa eexiste porque index está
 builder.Services.AddScoped<IServicioMonedas,ServicioMonedas>(); //siempre que pongas la interfaz, instanciara la clase de forma automatica
 
+
 //builder.Services.AddScoped<IServicioMonedas,ServicioCriptoMonedas>(); Para qye trabaje con criptomonedas. Ejercicio resuleto
 
+//Tarea para casa:
+builder.Services.AddScoped<IEmail,MailDesarrollo>();
 
  
 //Cada vez que yo pida iser.., se instanciará ServicioMonedas
