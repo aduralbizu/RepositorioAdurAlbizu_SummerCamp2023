@@ -21,7 +21,7 @@ builder.Services.AddScoped<IServicioMonedas,ServicioMonedas>(); //siempre que po
 
  
 //Cada vez que yo pida iser.., se instanciará ServicioMonedas
-var app = builder.Build();
+var app = builder.Build(); 
 
 //++2- Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
