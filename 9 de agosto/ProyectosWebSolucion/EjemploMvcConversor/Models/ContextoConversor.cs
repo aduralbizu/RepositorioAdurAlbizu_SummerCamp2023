@@ -20,6 +20,7 @@ namespace EjemploMvcConversor.Models
         }
 
         public DbSet<Moneda> Monedas { get; set; }
+        public DbSet <Pais> pais { get; set; }
 
     }
 
