@@ -6,7 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Add services to the container.
+//Add services to the container. Aquí están todos los servicios qe necesitas:
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
@@ -16,7 +17,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IRepositorioMonedas,RepositorioMonedasMemoria>(); //Esto hemos colocado en este ejemplo
+builder.Services.AddScoped<IRepositorioMonedas,RepositorioMonedasMemoria>(); //Esto hemos colocado en este ejemplo.Registro este ejemplo en el contenedor de servicios
 
 var app = builder.Build();
 

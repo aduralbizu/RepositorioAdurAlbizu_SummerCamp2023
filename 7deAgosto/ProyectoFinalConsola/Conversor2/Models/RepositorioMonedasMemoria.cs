@@ -1,9 +1,9 @@
 ﻿
 namespace Conversor2.Models
 {
-    public class RepositorioMonedasMemoria:IRepositorioMonedas
+    public class RepositorioMonedasMemoria : IRepositorioMonedas
     {
-        
+
         public List<Moneda> Lista { get; set; }
 
         public RepositorioMonedasMemoria()
@@ -17,7 +17,7 @@ namespace Conversor2.Models
 
         public Moneda ObtenerMoneda(int id)
         {
-            return Lista.FirstOrDefault(m=> m.Id == id); //Recuperar el primero que coincida
+            return Lista.FirstOrDefault(m => m.Id == id); //FirstOrDefault recupera el primero que cumpla con cierta condicion. 
         }
 
         public IEnumerable<Moneda> ObtenerMonedas()
