@@ -52,7 +52,7 @@ namespace EjemploMvcConversor.Controllers
 
                 //Moneda moneda = monedaJson; NoContent podemos hacer esto
 
-                var moneda = mapper.Map<Moneda>(monedaJson);
+                Moneda moneda = mapper.Map<Moneda>(monedaJson);
                 //<origen>(destino)
                 //Mtachea campos que coinciden. De esta forma
                 //agregamos de forma automatica las monedas
