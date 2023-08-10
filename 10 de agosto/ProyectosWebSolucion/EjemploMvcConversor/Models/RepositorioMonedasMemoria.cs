@@ -23,5 +23,10 @@
         {
             return Lista;
         }
+
+        public void AgregarMoneda(Moneda moneda)
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

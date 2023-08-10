@@ -27,9 +27,12 @@ namespace EjemploMvcConversor
 
 
             builder.Services.AddScoped<IServicioMonedas,ServicioCriptoMonedas>(); 
-            builder.Services.AddScoped<IRepositorioMonedas,RepositorioMonedasMemoria>(); 
+            builder.Services.AddScoped<IRepositorioMonedas,RepositorioMonedas>(); 
 
+            //new:
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+            //aqui hay 4 servicios
 
             var app = builder.Build();
 
