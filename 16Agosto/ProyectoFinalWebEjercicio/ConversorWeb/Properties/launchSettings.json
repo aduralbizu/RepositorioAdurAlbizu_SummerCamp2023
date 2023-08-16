@@ -3,17 +3,16 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:64723",
-      "sslPort": 44315
+      "applicationUrl": "http://localhost:46659",
+      "sslPort": 44336
     }
   },
   "profiles": {
-    "EjercicioAPI": {
+    "ConversorWeb": {
       "commandName": "Project",
-      "launchUrl": "swagger", //Para ir siempre a swagger
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7055;http://localhost:5082",
+      "applicationUrl": "https://localhost:7033;http://localhost:5007",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
