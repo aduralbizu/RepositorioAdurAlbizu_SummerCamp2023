@@ -18,7 +18,7 @@ var app = builder.Build();
 
 
 
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())                      
 {
     app.UseSwagger(); //PREPARA LA DOCUMENTACION
     app.UseSwaggerUI(); //LA GENERA     
