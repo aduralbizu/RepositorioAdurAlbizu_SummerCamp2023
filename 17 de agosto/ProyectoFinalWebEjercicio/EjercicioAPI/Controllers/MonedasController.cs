@@ -1,6 +1,7 @@
-﻿using ConversorWeb.Models;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Models;
+using Repositorios;
 
 namespace EjercicioAPI.Controllers
 {
@@ -21,9 +22,9 @@ namespace EjercicioAPI.Controllers
 
         private readonly IRepositorioMonedas repositorioMonedas;
 
-        public MonedasController( IRepositorioMonedas repositorioMonedas )
+        public MonedasController(IRepositorioMonedas repositorioMonedas)
         {
-          
+
             this.repositorioMonedas = repositorioMonedas;
 
         }
@@ -48,11 +49,12 @@ namespace EjercicioAPI.Controllers
         //+ A Verbo/accion http
         [HttpGet]
         //+B-Devuelve ActionResult<Tipo>
-        public ActionResult<IEnumerable<Moneda>> ObtenerMonedas()
+        //api/Monedas 
+        public ActionResult<List<Moneda>> ObtenerMonedas()
         {
+            repositorioMonedas.AgregarMonedas();
 
-
-            var lista = repositorioMonedas.ObtenerMonedas();
+            var lista = repositorioMonedas.ObtenerMonedas().ToList();
 
             //+C- Devolver resultado y codigo de estado
 
@@ -60,6 +62,29 @@ namespace EjercicioAPI.Controllers
 
         }
 
+        //api/Monedas/{Codigomoneda}
+        [HttpGet("{CodigoMoneda}")]
+        public ActionResult<MonedaDTO> ObtenerMoneda(string CodigoMoneda)
+        {
 
-    }//No devuelve vistas
+
+            var moneda = repositorioMonedas.ObtenerMoneda(CodigoMoneda);
+
+            MonedaDTO monedaDTO = new MonedaDTO()
+            {
+                Id = moneda.Id,
+                Code = moneda.Code,
+                Name = moneda.Name,
+                Symbol = moneda.Symbol,
+                Descripcion = $"{moneda.Code} {moneda.Symbol} {moneda.Name}"
+            };
+
+
+            //+C- Devolver resultado y codigo de estado
+
+            return Ok(monedaDTO);//Esto es como la vista
+
+
+        }//No devuelve vistas
+    }
 }

@@ -1,6 +1,9 @@
-using ConversorWeb.Models;
+using Contexto;
+using freecurrencyapi;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
+using Repositorios;
+using Utilidades;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +22,9 @@ builder.Services.AddDbContext<ContextoConversor>(options =>
 });
 
 builder.Services.AddScoped<IRepositorioMonedas, RepositorioMonedas>();
+builder.Services.AddScoped<IDataCollector, DataCollector>();
+builder.Services.AddScoped<Freecurrencyapi>();
+
 
 var app = builder.Build();
 

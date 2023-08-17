@@ -1,7 +1,8 @@
-using ConversorWeb.Models;
-using ConversorWeb.Utils;
+using Contexto;
 using freecurrencyapi;
 using Microsoft.EntityFrameworkCore;
+using Repositorios;
+using Utilidades;
 
 namespace ConversorWeb
 {

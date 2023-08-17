@@ -1,6 +1,8 @@
-﻿using ConversorWeb.Models;
-using ConversorWeb.Utils;
+﻿using ConversorWeb.Utils;
 using Microsoft.AspNetCore.Mvc;
+using Models;
+using Repositorios;
+using Utilidades;
 
 namespace ConversorWeb.Controllers
 {
@@ -8,19 +10,19 @@ namespace ConversorWeb.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IRepositorioMonedas repositorioMonedas;
-        private readonly IDataCollector dataCollector;
+        
 
-        public MonedasController(ILogger<HomeController> logger, IRepositorioMonedas repositorioMonedas, IDataCollector dataCollector)
+        public MonedasController(ILogger<HomeController> logger, IRepositorioMonedas repositorioMonedas)
         {
             _logger = logger;
             this.repositorioMonedas = repositorioMonedas;
-            this.dataCollector = dataCollector;
+           
         }
 
         public async Task<IActionResult> Index()
         {
             _logger.LogInformation("Estoy en el Index de Monedas");
-            List<MonedaJson> listaMonedasJson = dataCollector.LeerMonedas();
+           // List<MonedaJson> listaMonedasJson = dataCollector.LeerMonedas();
             IEnumerable<Moneda> lista = repositorioMonedas.ObtenerMonedas();
 
             return View(lista);

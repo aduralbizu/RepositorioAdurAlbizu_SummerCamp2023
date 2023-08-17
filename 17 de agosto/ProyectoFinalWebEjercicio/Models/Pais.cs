@@ -1,4 +1,4 @@
-﻿namespace ConversorWeb.Models
+﻿namespace Models
 {
     public class Pais
     {

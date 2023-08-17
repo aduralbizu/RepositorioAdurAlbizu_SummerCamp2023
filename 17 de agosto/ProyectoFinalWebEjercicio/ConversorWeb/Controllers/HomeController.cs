@@ -3,6 +3,8 @@ using ConversorWeb.Models;
 using ConversorWeb.Profiles;
 using ConversorWeb.Utils;
 using Microsoft.AspNetCore.Mvc;
+using Models;
+using Repositorios;
 using System.Diagnostics;
 
 namespace ConversorWeb.Controllers

@@ -1,4 +1,6 @@
-﻿namespace ConversorWeb.Utils
+﻿using Models;
+
+namespace Utilidades
 {
     public interface IDataCollector
     {
@@ -7,6 +9,6 @@
 
         //List<FactorBaseDolarJson> LeerFactoresConversionJson();
 
-        List<MonedaJson> LeerMonedas();
+        List<Moneda> LeerMonedas();
     }
 }

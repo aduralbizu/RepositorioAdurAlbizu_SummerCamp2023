@@ -1,28 +1,25 @@
-﻿
-using ConversorWeb.Models;
-using freecurrencyapi;
+﻿using freecurrencyapi;
+using Models;
 using Newtonsoft.Json.Linq;
 
-namespace ConversorWeb.Utils
+namespace Utilidades
 {
     public class DataCollector : IDataCollector
     {
         private readonly string ApiKey = "fca_live_cV1mDh79gHYunHYxMEIeuL6CIINDyjmpDPXUvCBf";
-        private readonly IRepositorioMonedas repositorioMonedas;
 
-        public DataCollector(IRepositorioMonedas repositorioMonedas, Freecurrencyapi freecurrencyapi)
+        public DataCollector(Freecurrencyapi freecurrencyapi)
         {
-            this.repositorioMonedas = repositorioMonedas;
         }
 
         //Meter info JSON en objetos leyendo directamente del archivo
-        public List<MonedaJson> LeerMonedas()
+        public List<Moneda> LeerMonedas()
         {
             var freecurrencyapi = new Freecurrencyapi(ApiKey);
             string monedasApi = freecurrencyapi.Currencies("EUR,USD,GBP,JPY,CAD,CNY,INR,KRW,RUB,PHP");
             //freecurrencyapi.Status();
 
-            List<MonedaJson> monedas = new List<MonedaJson>();
+            List<Moneda> monedas = new List<Moneda>();
             // Deserializar el JSON en un objeto JObject
             JObject jsonObject = JObject.Parse(monedasApi);
             JObject currencies = (JObject)jsonObject["data"];
@@ -34,11 +31,13 @@ namespace ConversorWeb.Utils
                 string symbol = moneda.Value["symbol"].ToString();
                 Moneda newMoneda = new Moneda { Code = code, Name = name, Symbol = symbol };
 
-                if (repositorioMonedas.ObtenerMoneda(code) == null)
-                {
-                    // Añade en la base de datos las monedas que obtiene de la API
-                    repositorioMonedas.AgregarMoneda(newMoneda);
-                }
+                monedas.Add(newMoneda);
+
+                //if (repositorioMonedas.ObtenerMoneda(code) == null)
+                //{
+                //    // Añade en la base de datos las monedas que obtiene de la API
+                //    repositorioMonedas.AgregarMoneda(newMoneda);
+                //}
             }
             return monedas;
             // Guardar en base de datos

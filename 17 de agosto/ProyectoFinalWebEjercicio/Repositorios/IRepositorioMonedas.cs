@@ -1,5 +1,6 @@
-﻿
-namespace ConversorWeb.Models
+﻿using Models;
+
+namespace Repositorios
 {
     public interface IRepositorioMonedas
     {
@@ -7,5 +8,7 @@ namespace ConversorWeb.Models
 
         Moneda ObtenerMoneda(string codigo);
         void AgregarMoneda(Moneda moneda);
+
+        void AgregarMonedas();
     }
 }

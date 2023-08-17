@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Models;
 
-namespace ConversorWeb.Models
+namespace Contexto
 {
     public class ContextoConversor : DbContext
     {
@@ -21,5 +22,12 @@ namespace ConversorWeb.Models
         public DbSet<Moneda> Moneda { get; set; }
 
         public DbSet<Pais> Pais { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Moneda>()
+                .HasIndex(u => u.Code)
+                .IsUnique();
+        }
     }
 }
