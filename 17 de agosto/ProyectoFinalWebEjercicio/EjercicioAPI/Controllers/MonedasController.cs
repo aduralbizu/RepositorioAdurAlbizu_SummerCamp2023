@@ -66,24 +66,19 @@ namespace EjercicioAPI.Controllers
         [HttpGet("{CodigoMoneda}")]
         public ActionResult<MonedaDTO> ObtenerMoneda(string CodigoMoneda)
         {
-
-
             var moneda = repositorioMonedas.ObtenerMoneda(CodigoMoneda);
 
             MonedaDTO monedaDTO = new MonedaDTO()
             {
-                Id = moneda.Id,
                 Code = moneda.Code,
                 Name = moneda.Name,
                 Symbol = moneda.Symbol,
                 Descripcion = $"{moneda.Code} {moneda.Symbol} {moneda.Name}"
             };
 
-
             //+C- Devolver resultado y codigo de estado
 
             return Ok(monedaDTO);//Esto es como la vista
-
 
         }//No devuelve vistas
     }
