@@ -23,7 +23,7 @@ public class AuthorsController : ControllerBase
     }
 
     [HttpGet] 
-    [HttpHead]
+    [HttpHead]  
     public async Task<ActionResult<IEnumerable<AuthorDto>>> GetAuthors()
     {
         // throw new Exception("Test exception");
