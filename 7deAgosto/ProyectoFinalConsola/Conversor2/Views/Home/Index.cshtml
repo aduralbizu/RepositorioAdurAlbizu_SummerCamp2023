@@ -1,18 +1,22 @@
-﻿@model IEnumerable<Conversor2.Models.Moneda>
+﻿<!-- arrobamodel: Se utiliza en las vistas de ASP.NET MVC para declarar el tipo de modelo que la vista espera recibir.  -->
+<!-- arroba{}: Para poner codigo c#  -->
+@model IEnumerable<Conversor2.Models.Moneda>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page"; // Esto simplemente pone titulo en la pestaña
    
 } 
-
 
 Son @Model.Count() monedas
 
 La primera moneda es @Model.Take(1).Select(m=>m)
+<!--  Select es innecesario -->
+<!--  arrobaModel.FirstOrDefault() mucho mejor-->
 
 <div class="text-center">
-    @foreach (var moneda in Model)
+    @foreach (var moneda in @Model)
     {
-        <h2> @moneda.CodigoMoneda </h2>
-        <h3>@moneda.Descripcion</h3>
+        <h2> Codigo Moneda: @moneda.CodigoMoneda </h2>
+        <h3> Descripcion: @moneda.Descripcion</h3>
+        <h4> Id: @moneda.Id </h4>
     }
 </div>

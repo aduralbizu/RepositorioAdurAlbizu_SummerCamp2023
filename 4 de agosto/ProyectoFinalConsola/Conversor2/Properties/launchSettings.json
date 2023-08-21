@@ -3,7 +3,7 @@
     "Conversor2": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "home/privacy",
+      "launchUrl": "home",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

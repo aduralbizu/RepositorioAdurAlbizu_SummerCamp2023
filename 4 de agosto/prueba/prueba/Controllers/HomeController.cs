@@ -1,21 +1,24 @@
-﻿using EjemploMvcConversor.Servicios;
-using Microsoft.AspNetCore.Mvc;
-using prueba.Controllers.servicios;
+﻿using Microsoft.AspNetCore.Mvc;
 using prueba.Models;
+using prueba.servicios;
 using System.Diagnostics;
 
 
 namespace EjemploMvcConversor.Controllers
 {
     public class HomeController : Controller
-    {
+    { // controller determines what response to send back to a user when a user makes a browser request.
         private readonly ILogger<HomeController> _logger;
-        private readonly IServicioMonedas servicioMonedas;
+        private readonly IServicioMonedas servicioMonedas;//HERE!!!
 
-        public HomeController(ILogger<HomeController> logger, IServicioMonedas servicioMonedas)
+        //Tarea:
+        private readonly IEmail email;//HERE!!!
+
+        public HomeController(ILogger<HomeController> logger, IServicioMonedas servicioMonedas, IEmail email)//HERE!!!
         {
             _logger = logger;
             this.servicioMonedas = servicioMonedas;
+            this.email = email;
         }
 
         public IActionResult Index()
@@ -27,16 +30,20 @@ namespace EjemploMvcConversor.Controllers
 
             return View();
 
-
-
         }
 
         public IActionResult Privacy()
         {
 
             //var serviciomonedas = new ServicioMonedas();
-            var lista = this.servicioMonedas.ObtenerMonedas();
+            //var lista = this.servicioMonedas.ObtenerMonedas();
+
+            ViewBag.string_mensaje1 = this.email.EscribirEmail();
+            
             return View();
+
+            //Tarea:
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

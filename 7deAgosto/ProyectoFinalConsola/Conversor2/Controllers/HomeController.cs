@@ -18,12 +18,9 @@ namespace Conversor2.Controllers
         public IActionResult Index() //Iactionresult interfaz de action euslt
         {
 
-
             IEnumerable<Moneda> lista = repositorioMonedas.ObtenerMonedas();
-           
 
-
-            return View(lista); //Ya no mas newbag, a partir de ahora devolver en view explicitamente
+            return View(lista); //Ya no mas newbag, a partir de ahora devolver en view explicitamente. Pasamos lista como modelo
         }
 
         public IActionResult Privacy()

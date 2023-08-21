@@ -8,5 +8,7 @@ namespace Conversor2.Models
         IEnumerable<Moneda> ObtenerMonedas();
 
         Moneda ObtenerMoneda(int id);
+
+
     }
 }
