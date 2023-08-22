@@ -46,7 +46,7 @@ namespace EjercicioAPI.Controllers
         }
 
         //api/Monedas/{Codigomoneda}
-        [HttpGet("{CodigoMoneda}",Name = "ObtenerMoneda")]
+        [HttpGet("{CodigoMoneda}", Name = "ObtenerMoneda")]
         public async Task<ActionResult<MonedaDTO>> ObtenerMoneda([FromRoute] string CodigoMoneda)
         {
 
@@ -79,13 +79,28 @@ namespace EjercicioAPI.Controllers
             var monedaToReturn = mapper.Map<MonedaDTO>(monedaEntidad);
 
             return CreatedAtRoute("ObtenerMoneda",
-                new { CodigoMoneda = monedaToReturn.Id },
+                new { CodigoMoneda = monedaToReturn.Code },
                 monedaToReturn);
-
-
         }
 
+        [HttpDelete("{CodigoMoneda}")]
+        public async Task<ActionResult> DeleteCourseForAuthor(
+      string CodigoMoneda)
+        {
 
+            var moneda = await repositorioMonedas
+                .ObtenerMonedaAsync(CodigoMoneda);
+
+            if (moneda == null)
+            {
+                return NotFound();
+            }
+
+            await repositorioMonedas.BorrarMoneda(moneda);
+            await repositorioMonedas.SaveAsync();
+
+            return Ok();
+        }
 
     }
 }

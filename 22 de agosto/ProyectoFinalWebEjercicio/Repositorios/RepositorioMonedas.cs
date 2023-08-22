@@ -44,6 +44,10 @@ namespace Repositorios
 
 
         }
+        public async Task BorrarMoneda(Moneda moneda)
+        {
+            _context.Moneda.Remove(moneda);
+        }
         public async Task<Moneda> ObtenerMonedaAsync(string codigo)
         {
             return await _context.Moneda.FirstOrDefaultAsync(x => x.Code == codigo);
