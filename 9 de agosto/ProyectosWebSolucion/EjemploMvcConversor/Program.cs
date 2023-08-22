@@ -25,11 +25,8 @@ namespace EjemploMvcConversor
                 options.UseSqlServer(builder.Configuration["ConnectionStrings:ConexionDatos"]);
             });
 
-
             builder.Services.AddScoped<IServicioMonedas,ServicioCriptoMonedas>(); 
             builder.Services.AddScoped<IRepositorioMonedas,RepositorioMonedasMemoria>(); 
-
-
 
             var app = builder.Build();
 

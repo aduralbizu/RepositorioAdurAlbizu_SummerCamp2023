@@ -36,12 +36,8 @@ namespace EjercicioAPI.Controllers
         public async Task<ActionResult<IEnumerable<Moneda>>> ObtenerMonedas()
         {
             await repositorioMonedas.AgregarMonedas();
-   
-
 
             var lista =await repositorioMonedas.ObtenerMonedasAsync();
-
-
 
             //+C- Devolver resultado y codigo de estado
 
@@ -53,7 +49,6 @@ namespace EjercicioAPI.Controllers
         [HttpGet("{CodigoMoneda}")]
         public async Task<ActionResult<MonedaDTO>> ObtenerMoneda([FromRoute]string CodigoMoneda)
         {
-
 
             Moneda moneda = await repositorioMonedas.ObtenerMonedaAsync(CodigoMoneda);
 
@@ -69,5 +64,21 @@ namespace EjercicioAPI.Controllers
 
 
         }//No devuelve vistas
+
+
+        //api/Monedas
+        [HttpPost]
+        public async Task<ActionResult<MonedaDTO>> CrearMoneda(
+            MonedaForCreationDto)
+        {
+
+
+
+        }
+
+
+
+
+
     }
 }

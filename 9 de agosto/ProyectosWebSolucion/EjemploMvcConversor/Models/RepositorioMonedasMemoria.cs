@@ -2,10 +2,7 @@
 {
     public class RepositorioMonedasMemoria : IRepositorioMonedas
     {
-
-        
         public List<Moneda> Lista { get; set; }
-
         public RepositorioMonedasMemoria()
         {
             Lista = new List<Moneda>() { 
@@ -18,7 +15,6 @@
         {
             return Lista.FirstOrDefault(m => m.Id == id); 
         }
-
         public IEnumerable<Moneda> ObtenerMonedas()
         {
             return Lista;
