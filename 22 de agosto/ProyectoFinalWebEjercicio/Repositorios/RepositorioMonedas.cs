@@ -61,12 +61,6 @@ namespace Repositorios
 
         }
 
-        //public async Task ActualizarMoneda()
-        //{
-        //    var proba = await _context.Moneda.ToListAsync();
-        //    return proba;
-
-        //}
 
         public async Task<bool> ExisteMonedaAsync(String codigo)
         {

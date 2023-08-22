@@ -12,12 +12,15 @@ namespace Perfiles
             .ForMember(dest => dest.Descripcion, opt =>
                 opt.MapFrom(src => $"{src.Code} {src.Name} {src.Symbol}"));
             CreateMap<MonedaForCreationDto, Moneda>().ForMember(dest => dest.Code, opt =>
-        {
-            opt.MapFrom(src => src.Code.Length > 3 ? src.Code.Substring(0, 3) : src.Code);
-        });
-
-
-
+            {
+                opt.MapFrom(src => src.Code.Length > 3 ? src.Code.Substring(0, 3) : src.Code);
+            });
+            CreateMap<MonedaParaActualizarDto, Moneda>()
+             .ForMember(dest => dest.Id, opt => opt.Ignore())  // Exclude the Id property
+             .ForMember(dest => dest.Code, opt =>
+             {
+                 opt.MapFrom(src => src.Code.Length > 3 ? src.Code.Substring(0, 3) : src.Code);
+             });
         }
 
     }
