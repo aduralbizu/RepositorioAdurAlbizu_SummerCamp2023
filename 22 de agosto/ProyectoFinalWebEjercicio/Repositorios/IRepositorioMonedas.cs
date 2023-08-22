@@ -4,7 +4,7 @@ namespace Repositorios
 {
     public interface IRepositorioMonedas
     {
-        Task AgregarMoneda(Moneda moneda);
+        Task<bool> AgregarMoneda(Moneda moneda);
 
         Task AgregarMonedas();
 

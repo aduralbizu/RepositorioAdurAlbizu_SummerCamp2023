@@ -17,14 +17,15 @@ namespace Repositorios
             _colector = colector;
         }
 
-        public async Task AgregarMoneda(Moneda moneda)
+        public async Task<bool> AgregarMoneda(Moneda moneda)
         {
             if (await ObtenerMonedaAsync(moneda.Code) == null)
             {
                 _context.Moneda.Add(moneda);
                 await SaveAsync();
-
+                return false;
             }
+            return true;
 
         }
 
@@ -40,7 +41,6 @@ namespace Repositorios
 
 
             }
-
 
 
         }

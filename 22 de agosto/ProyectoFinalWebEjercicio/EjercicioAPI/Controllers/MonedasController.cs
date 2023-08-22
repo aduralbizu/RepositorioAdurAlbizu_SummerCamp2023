@@ -74,7 +74,9 @@ namespace EjercicioAPI.Controllers
 
             var monedaEntidad = mapper.Map<Entities.Moneda>(moneda);
 
-            await repositorioMonedas.AgregarMoneda(monedaEntidad);
+            bool fail = await repositorioMonedas.AgregarMoneda(monedaEntidad);
+
+            if (fail) return BadRequest("The object already exists.");
 
             var monedaToReturn = mapper.Map<MonedaDTO>(monedaEntidad);
 
@@ -83,6 +85,7 @@ namespace EjercicioAPI.Controllers
                 monedaToReturn);
         }
 
+        //api/Monedas/{Codigomoneda}
         [HttpDelete("{CodigoMoneda}")]
         public async Task<ActionResult> DeleteCourseForAuthor(
       string CodigoMoneda)
@@ -101,6 +104,8 @@ namespace EjercicioAPI.Controllers
 
             return Ok();
         }
+
+
 
     }
 }
