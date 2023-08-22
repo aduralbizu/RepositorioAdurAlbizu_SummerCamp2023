@@ -14,6 +14,8 @@ namespace Repositorios
 
         Task<IEnumerable<Moneda>> ObtenerMonedasAsync();
 
+        Task<bool> ExisteMonedaAsync(String codigo);
+
         Task<bool> SaveAsync();
     }
 }

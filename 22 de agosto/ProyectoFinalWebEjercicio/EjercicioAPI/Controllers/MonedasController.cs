@@ -105,7 +105,36 @@ namespace EjercicioAPI.Controllers
             return Ok();
         }
 
+        ///api/Monedas/{CodigoMoneda}
+        [HttpPut("{CodigoMoneda}")]
+        public async Task<IActionResult> ActualizarMoneda(String CodigoMoneda, MonedaParaActualizarDto monedaParaActualizarDto)
+        {
+
+            //+1-Comprobar si existe regstro (await)
+            if (!await repositorioMonedas.ExisteMonedaAsync(CodigoMoneda))
+            {
+                return NotFound();
+            }
+
+            //+2-Obtener registro (await)
+
+            Moneda monedaDelRepo = await repositorioMonedas
+                .ObtenerMonedaAsync(CodigoMoneda);
+
+            //+3 Mapear de DTO que entra a entidad
+
+            _mapper.Map(monedaParaActualizarDto, monedaDelRepo);
+
+            //+4- Actualizar mediante repos
+            repositorioMonedas.UpdateCourse(courseForAuthorFromRepo);
 
 
+            //+5-Guardar cambios (await)
+            await repositorioMonedas.SaveAsync();
+
+            //+6-Devolver no content 
+            //También se podría devolver ok
+            return NoContent();
+        }
     }
 }
