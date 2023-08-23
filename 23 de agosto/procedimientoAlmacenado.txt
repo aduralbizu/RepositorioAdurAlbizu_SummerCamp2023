@@ -1,0 +1,10 @@
+CREATE PROCEDURE dbo.DeleteQuotesForSamurai
+             @samuraiId int
+             AS
+             DELETE FROM Quotes
+             WHERE Quotes.SamuraiId=@samuraiId
+var samuraiId = 2;
+
+
+          var affected = _context.Database
+              .ExecuteSqlInterpolated($"EXEC DeleteQuotesForSamurai {samuraiId}");
