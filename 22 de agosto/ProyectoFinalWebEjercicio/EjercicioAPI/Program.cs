@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 //1-Add services as container
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(); 
 
 //Documento de la appi:
 
