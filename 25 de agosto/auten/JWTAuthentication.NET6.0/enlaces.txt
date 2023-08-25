@@ -1,0 +1,5 @@
+https://www.c-sharpcorner.com/article/jwt-authentication-and-authorization-in-net-6-0-with-identity-framework/
+
+https://www.ionos.es/digitalguide/servidores/seguridad/que-es-el-role-based-access-control-rbac/
+
+https://datatracker.ietf.org/doc/html/rfc7519
