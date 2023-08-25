@@ -22,7 +22,7 @@ namespace JWTAuthentication.NET6._0.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<WeatherForecast> Get() 
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
