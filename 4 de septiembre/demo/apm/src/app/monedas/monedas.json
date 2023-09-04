@@ -1,0 +1,233 @@
+[
+    {
+        "id": "60ce38d0-41ac-4bd3-af71-026df2bb5c13",
+        "code": "AUD",
+        "name": "Australian Dollar",
+        "symbol": "AU$",
+        "descripcion": "AUD Australian Dollar AU$"
+    },
+    {
+        "id": "a56ec4a7-0e56-4c38-a220-071c24fe687e",
+        "code": "PHP",
+        "name": "Philippine Peso",
+        "symbol": "₱",
+        "descripcion": "PHP Philippine Peso ₱"
+    },
+    {
+        "id": "bc3d903f-2a99-45a7-8c5f-0ca03474a476",
+        "code": "EUR",
+        "name": "Euro",
+        "symbol": "€",
+        "descripcion": "EUR Euro €"
+    },
+    {
+        "id": "d96cfca5-f097-4e8d-8f48-10bb1658aeb6",
+        "code": "NZD",
+        "name": "New Zealand Dollar",
+        "symbol": "NZ$",
+        "descripcion": "NZD New Zealand Dollar NZ$"
+    },
+    {
+        "id": "103a978a-182c-453a-8fbd-17d97255e0ba",
+        "code": "NOK",
+        "name": "Norwegian Krone",
+        "symbol": "Nkr",
+        "descripcion": "NOK Norwegian Krone Nkr"
+    },
+    {
+        "id": "66c5cbf4-2e6a-4a72-a00f-1ac49f2b199f",
+        "code": "INR",
+        "name": "Indian Rupee",
+        "symbol": "Rs",
+        "descripcion": "INR Indian Rupee Rs"
+    },
+    {
+        "id": "bbd13037-ff19-4ff6-a75b-21b11a61af76",
+        "code": "THB",
+        "name": "Thai Baht",
+        "symbol": "฿",
+        "descripcion": "THB Thai Baht ฿"
+    },
+    {
+        "id": "924ce68d-c920-4911-a354-2fe2be2acc26",
+        "code": "BGN",
+        "name": "Bulgarian Lev",
+        "symbol": "BGN",
+        "descripcion": "BGN Bulgarian Lev BGN"
+    },
+    {
+        "id": "56a1a26a-89e8-4704-9b9f-34ea5f5e94d0",
+        "code": "GBP",
+        "name": "British Pound Sterling",
+        "symbol": "£",
+        "descripcion": "GBP British Pound Sterling £"
+    },
+    {
+        "id": "9dcd063c-9151-4131-bb84-3e5ba038d391",
+        "code": "ISK",
+        "name": "Icelandic Króna",
+        "symbol": "Ikr",
+        "descripcion": "ISK Icelandic Króna Ikr"
+    },
+    {
+        "id": "ead6934b-e50a-4b2b-8548-46dbfc87aedd",
+        "code": "TRY",
+        "name": "Turkish Lira",
+        "symbol": "TL",
+        "descripcion": "TRY Turkish Lira TL"
+    },
+    {
+        "id": "bf156d01-64d1-4199-9463-477dee4bd4a4",
+        "code": "MYR",
+        "name": "Malaysian Ringgit",
+        "symbol": "RM",
+        "descripcion": "MYR Malaysian Ringgit RM"
+    },
+    {
+        "id": "cc71c264-c402-4d26-8fca-47bf4a526b39",
+        "code": "RON",
+        "name": "Romanian Leu",
+        "symbol": "RON",
+        "descripcion": "RON Romanian Leu RON"
+    },
+    {
+        "id": "170958bc-cce2-476f-940e-4bb9a9dc01af",
+        "code": "CZK",
+        "name": "Czech Republic Koruna",
+        "symbol": "Kč",
+        "descripcion": "CZK Czech Republic Koruna Kč"
+    },
+    {
+        "id": "42a73548-de06-476d-8892-5208245f2d9f",
+        "code": "SEK",
+        "name": "Swedish Krona",
+        "symbol": "Skr",
+        "descripcion": "SEK Swedish Krona Skr"
+    },
+    {
+        "id": "6efbb021-3939-41ed-b13b-54cd6264a643",
+        "code": "ILS",
+        "name": "Israeli New Sheqel",
+        "symbol": "₪",
+        "descripcion": "ILS Israeli New Sheqel ₪"
+    },
+    {
+        "id": "815993e5-c28e-4761-9e02-5c8b2c51ad8e",
+        "code": "HRK",
+        "name": "Croatian Kuna",
+        "symbol": "kn",
+        "descripcion": "HRK Croatian Kuna kn"
+    },
+    {
+        "id": "dc815573-8918-44bc-8f7d-7203ab2b18ad",
+        "code": "HUF",
+        "name": "Hungarian Forint",
+        "symbol": "Ft",
+        "descripcion": "HUF Hungarian Forint Ft"
+    },
+    {
+        "id": "90441ab2-e010-4a36-8227-80be72c80a80",
+        "code": "DKK",
+        "name": "Danish Krone",
+        "symbol": "Dkr",
+        "descripcion": "DKK Danish Krone Dkr"
+    },
+    {
+        "id": "3e0b1d05-867c-4016-806a-8a93c3fae658",
+        "code": "KRW",
+        "name": "South Korean Won",
+        "symbol": "₩",
+        "descripcion": "KRW South Korean Won ₩"
+    },
+    {
+        "id": "e646ac14-18e9-42a1-ba78-8abcb1c9c282",
+        "code": "JPY",
+        "name": "Japanese Yen",
+        "symbol": "¥",
+        "descripcion": "JPY Japanese Yen ¥"
+    },
+    {
+        "id": "18e09be0-1972-4fa6-8d93-958f4a6e83a4",
+        "code": "PLN",
+        "name": "Polish Zloty",
+        "symbol": "zł",
+        "descripcion": "PLN Polish Zloty zł"
+    },
+    {
+        "id": "11d1d54d-616a-43d9-b3f9-a750cedf554c",
+        "code": "CAD",
+        "name": "Canadian Dollar",
+        "symbol": "CA$",
+        "descripcion": "CAD Canadian Dollar CA$"
+    },
+    {
+        "id": "08d4e5ca-4e8c-4dda-88c2-ab16f56ee6c9",
+        "code": "BRL",
+        "name": "Brazilian Real",
+        "symbol": "R$",
+        "descripcion": "BRL Brazilian Real R$"
+    },
+    {
+        "id": "6b467d74-b16e-4f86-98a7-b6f8b2e72af4",
+        "code": "ZAR",
+        "name": "South African Rand",
+        "symbol": "R",
+        "descripcion": "ZAR South African Rand R"
+    },
+    {
+        "id": "a9e9e523-2216-4717-9584-bac153935b8c",
+        "code": "HKD",
+        "name": "Hong Kong Dollar",
+        "symbol": "HK$",
+        "descripcion": "HKD Hong Kong Dollar HK$"
+    },
+    {
+        "id": "0b73dcfc-186a-47ce-b127-c08075e1f47f",
+        "code": "SGD",
+        "name": "Singapore Dollar",
+        "symbol": "S$",
+        "descripcion": "SGD Singapore Dollar S$"
+    },
+    {
+        "id": "f84e52b6-fc51-4b82-92ad-c15bd8b40d90",
+        "code": "CNY",
+        "name": "Chinese Yuan",
+        "symbol": "CN¥",
+        "descripcion": "CNY Chinese Yuan CN¥"
+    },
+    {
+        "id": "72c0918c-d95c-4bb7-9a73-d53d60f46c55",
+        "code": "RUB",
+        "name": "Russian Ruble",
+        "symbol": "RUB",
+        "descripcion": "RUB Russian Ruble RUB"
+    },
+    {
+        "id": "fede8d7d-394c-42c7-863f-ee632fc30556",
+        "code": "CHF",
+        "name": "Swiss Franc",
+        "symbol": "CHF",
+        "descripcion": "CHF Swiss Franc CHF"
+    },
+    {
+        "id": "043d74e4-4fc9-45b3-b286-f55e4e1184eb",
+        "code": "MXN",
+        "name": "Mexican Peso",
+        "symbol": "MX$",
+        "descripcion": "MXN Mexican Peso MX$"
+    },
+    {
+        "id": "759838d5-88b0-4ba2-aabe-f7efe0907f53",
+        "code": "IDR",
+        "name": "Indonesian Rupiah",
+        "symbol": "Rp",
+        "descripcion": "IDR Indonesian Rupiah Rp"
+    },
+    {
+        "id": "96c67e33-5dba-4b0c-a969-ffb47fc2f2ae",
+        "code": "USD",
+        "name": "US Dollar",
+        "symbol": "$",
+        "descripcion": "USD US Dollar $"
+    }
+]
