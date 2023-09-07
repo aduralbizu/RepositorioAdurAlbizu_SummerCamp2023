@@ -1,0 +1,25 @@
+https://angular.io/guide/component-interaction#intercept-input-property-changes-with-ngonchanges
+
+https://medium.com/angular-chile/validaciones-en-formularios-con-angular-d00a2d535d17#:~:text=Angular%2C%20son%20provee%20la%20clase%20Validators%20que%20trae,campo%20cumpla%20con%20un%20patr%C3%B3n%20de%20correo%20v%C3%A1lido
+
+https://docs.google.com/presentation/d/1DlyVxGWFrtpeG4e8mfk0rn_ZalftuP92jjKk1MVLueI/edit?usp=sharing
+
+https://medium.com/angular-chile/validaciones-en-formularios-con-angular-d00a2d535d17#:~:text=Angular%2C%20son%20provee%20la%20clase%20Validators%20que%20trae,campo%20cumpla%20con%20un%20patr%C3%B3n%20de%20correo%20v%C3%A1lido
+
+<form [formGroup]="myForm" (ngSubmit)="rellenarRegistro(myForm)" novalidate>
+                <h1 class="display-6 text-uppercase mb-3">REGISTRO</h1>
+                <div class="form-floating mb-3">
+                  <input formControlName="user" type="text" class="form-control" id="floatingInput" name="user"
+                    placeholder="Nombre de usuario" required maxlength="20">
+                  <label for="floatingInput">Nombre de usuario</label>
+                </div>
+                <div class="text-danger" *ngIf="myForm.get('user')?.errors && myForm.get('user')?.dirty">
+                  <p *ngIf="myForm.get('user')?.hasError('required')"><small>Campo requerido</small></p>
+                  <p *ngIf="myForm.get('user')?.hasError('minlength')"><small>Mas de 5 caracteres</small></p>
+                </div>
+                <button class="btn btn-outline-success w-100 py-2" type="submit"
+                  [disabled]="myForm.invalid">Registrarse</button>
+                <div class="text-center mt-3 ">
+                  <p>¿Ya eres miembro? <a [routerLink]="['/login']" style=" color: #7ac897;">inicia sesión</a></p>
+                </div>
+              </form>

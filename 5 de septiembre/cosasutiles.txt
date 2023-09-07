@@ -1,0 +1,12 @@
+https://itelisoft.com/como-utilizar-el-localstorage-en-angula/
+ngOnDestroy(): void {
+      if (this.sub) {
+        this.sub.unsubscribe();
+      }
+      if (this.sub2) {
+        this.sub2.unsubscribe();
+      }
+      if (this.sub3) {
+        this.sub3.unsubscribe();
+      }
+    }
