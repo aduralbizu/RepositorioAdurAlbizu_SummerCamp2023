@@ -2,23 +2,24 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from "@angular/common/http
 import { Injectable } from "@angular/core";
 import { Observable, catchError, tap, throwError } from "rxjs";
 
-import { IMoneda } from "./moneda";
+import { IPeticionConversion } from "./peticion-conversion";
+import { IResultadoConversion } from "./resultado-conversion";
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class MonedaService {
-  private monedaUrl = 'https://3enrayacodecurrencyconverter.azurewebsites.net/api/Monedas';
-  private token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibW9jaCIsImp0aSI6IjAyMTM2YWUzLTIxYTAtNGU4ZC05ODA3LTJlZTM3Mjc0OWYyNiIsImV4cCI6MTY5NDA4ODUxOCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.IXWHYIPHOI8rP60hp9NPlX4LSF1gjtomWpt5fcUWQ-E"
+export class ConversorService {
+  private conversorUrl = 'https://3enrayacodecurrencyconverter.azurewebsites.net/api/Conversor';
+  private token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibW9jaCIsImp0aSI6IjhiMTVkODlhLWU1YjUtNDM4Yi1iMTNhLWEzODU5NmNhYWZlOCIsImV4cCI6MTY5NTg5MjQ5MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.xHkxQ1cqrOW8iK156IJSKRTuTQBs-vGbJYzoeAIxDyI"
 
   constructor(private http: HttpClient) { }
 
-  getMonedas(): Observable<IMoneda[]> {
+  postConversion(body: IPeticionConversion): Observable<IResultadoConversion> {
     let headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
-    return this.http.get<IMoneda[]>(this.monedaUrl, { headers }).pipe(
-      tap(data => console.log('All', JSON.stringify(data))),
-      catchError(this.handleError)
+    return this.http.post<IResultadoConversion>(this.conversorUrl, body, { headers }).pipe(
+        tap(data => console.log('All', JSON.stringify(data))),
+        catchError(this.handleError)
     );
   }
 

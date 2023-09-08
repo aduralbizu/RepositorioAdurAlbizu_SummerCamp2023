@@ -37,7 +37,7 @@ export class ConversorComponent {
             importe: this.importe,
             monedaOrigenId: this.monedas.find(m => m.code === this.monedaOrigenSelect)?.id,
             monedaDestinoId: this.monedas.find(m => m.code === this.monedaDestinoSelect)?.id,
-            idUsuario: "a84a3d85-d6b3-48c6-bb78-34f115855e99"
+            idUsuario: "259289c4-6ea8-408f-b4d2-e22776ddcc58"
         };
 
         this.sub = this.conversorService.postConversion(peticionConversion).subscribe({

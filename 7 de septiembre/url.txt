@@ -23,3 +23,6 @@ https://medium.com/angular-chile/validaciones-en-formularios-con-angular-d00a2d5
                   <p>¿Ya eres miembro? <a [routerLink]="['/login']" style=" color: #7ac897;">inicia sesión</a></p>
                 </div>
               </form>
+
+
+https://docs.google.com/presentation/d/1DlyVxGWFrtpeG4e8mfk0rn_ZalftuP92jjKk1MVLueI/edit?usp=sharing

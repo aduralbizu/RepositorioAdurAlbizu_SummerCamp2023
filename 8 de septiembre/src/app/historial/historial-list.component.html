@@ -22,16 +22,15 @@
               <td>{{ historial.factor | number:'1.2-4' }}</td>
               <td>{{ historial.importe | currency:historial.codigoMonedaOrigen:'symbol' }}</td>
               <td>{{ historial.resultadoConversion | currency:historial.codigoMonedaDestino:'symbol' }}</td>
-              <td>{{ historial.createdDate | date:'medium' }}</td>
+              <td>{{ historial.createdDate | date:'medium':'GMT+4':'es_ES' }}</td>
             </tr>
           </tbody>
         </table>
         <div class='col-md-2'>
-          <button class='btn btn-danger' name="BorrarHistorial" (click) = "borrarHistorial()">Borrar Historial</button>
+          <button class='btn btn-danger' name="BorrarHistorial" (click) = "borrarHistorial()" *ngIf='historiales.length'>Borrar Historial</button>
       </div>
       </div>
 
     </div>
   
-    {{update}}
   </div>

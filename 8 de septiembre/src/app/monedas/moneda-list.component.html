@@ -14,29 +14,25 @@
         <h4>Filtered by: {{listFilter}}</h4>
       </div>
     </div>
-    <div class='table-responsive'>
+    <div class = 'table-responsive'>
       <table class='table'
              *ngIf='monedas.length'>
         <thead>
           <tr>
-            <th>
-              <button class='btn btn-primary' (click)="toggleImage()">
-                {{showImage ? 'Hide' : 'Show' }} Image
-              </button>
-            </th>
-            <th>Nombre</th>
-            <th>Codigo</th>
-            <th>Simbolo</th>
-            <th>Factor Conversion</th>
+            <th class='col-md-1'></th>
+            <th class='col-md-2'>Nombre</th>
+            <th class='col-md-1'>Codigo</th>
+            <th class='col-md-1'>Simbolo</th>
+            <th class="alinearderecha col-md-1">Factor Conversion</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor='let moneda of filteredMonedas'>
-            <td><img *ngIf="showImage" [src]="moneda.urlImagen" [title]="moneda.name"></td>
-            <td>{{ moneda.name }}</td>
-            <td>{{ moneda.code }}</td>
-            <td>{{ moneda.symbol }}</td>
-            <td>{{ moneda.factorConversion }}</td>
+            <td class='col-md-1'><img class="small-image" [src]="moneda.urlImagen" [title]="moneda.name"></td>
+            <td class='col-md-2'>{{ moneda.name }}</td>
+            <td class='col-md-1'>{{ moneda.code }}</td>
+            <td class='col-md-1'>{{ moneda.symbol }}</td>
+            <td class="alinearderecha col-md-1">{{ moneda.factorConversion }}</td>
           </tr>
         </tbody>
       </table>
