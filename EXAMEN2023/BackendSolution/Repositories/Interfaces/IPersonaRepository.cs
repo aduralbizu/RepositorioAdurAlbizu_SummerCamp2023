@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Persistence.Entities;
 
 namespace Repositories.Interfaces
 {
     public interface IPersonaRepository
     {
+        Task<IEnumerable<Persona>> GetPersonasOrdenadas();
+        Task CrearPersona(Persona persona);
+        Task<Persona?> GetPersonaPorNombre(string nombre);
+
     }
 }
