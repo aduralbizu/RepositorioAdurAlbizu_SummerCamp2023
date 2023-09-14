@@ -1,0 +1,41 @@
+/* Aplicar un estilo básico a la lista de usuarios */
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilo para el nombre del usuario */
+  li span.nombre {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Estilo para la edad del usuario */
+  li span.edad {
+    font-style: italic;
+    color: #666;
+  }
+  
+  /* Estilo para el teléfono del usuario */
+  li span.telefono {
+    color: #007bff;
+  }
+  
+  /* Estilo al pasar el mouse por encima */
+  li:hover {
+    background-color: #e9e9e9;
+  }
+  

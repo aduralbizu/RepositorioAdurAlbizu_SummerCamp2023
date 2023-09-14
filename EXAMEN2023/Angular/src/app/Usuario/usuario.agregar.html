@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Agregar Usuario</h2>
+    
+    <form [formGroup]="formulario" (ngSubmit)="rellenarRegistro(formulario)">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" formControlName="Nombre" class="form-control" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" formControlName="fechaNacimiento" class="form-control" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" formControlName="telefono" class="form-control" required>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+    </form>
+  </div>
+  
